@@ -8,17 +8,18 @@
 rel="stylesheet">
 </head>
 <body>
-    <div >
-        <h1 class=" text-center bg-danger text-white p-3 ">Lista de tareas</h1>
-    </div>
-    <form  id="formulario-tareas" class=" container p-3 ">
-        <input class="input-ingresar-tarea" type="text" name="ingresar tarea">
-        <input class="btn-agregar-tarea mg-5" type="submit" value="Agregar Tarea">
-        <div class="div mg-5"  role="alert"></div>
-    </form>
-        <div class="lista-tareas">
-
+    <nav class="navbar bg-body-tertiary bg-danger-subtle">
+        <div class="container-fluid bg-danger d-flex justify-content-center align-items-center">
+            <h1 href="#" class="navbar-brand ">Lista de Tareas</h1>
         </div>
+        <form  id="formulario-tareas" class=" container p-4 ">
+            <input class="input-ingresar-tarea form-control m-2 p-2 rounded-pill" type="text" name="ingresar tarea" placeholder="Ingresar Tarea...">
+            <input class="btn-agregar-tarea  btn btn-outline-dark m-2 p-1,5 rounded-pill" type="submit" value="Agregar Tarea">
+        </form>
+        <div class="div m-3 p-3 d-flex justify-content-center rounded-pill "  role="alert"></div>
+
+    </nav>
+        <ul class="lista-tareas container p-4"></ul>
    
 
     

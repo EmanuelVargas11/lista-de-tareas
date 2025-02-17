@@ -1,50 +1,47 @@
 const formularioTareas = document.querySelector('#formulario-tareas');
 const inputIngresarTarea = document.querySelector('.input-ingresar-tarea');
 const btnAgregarTarea = document.querySelector('.btn-agregar-tarea');
-const listaTareas = document.querySelector('.lista-tareas');
+const ulTareas = document.querySelector('.lista-tareas');
 const alerta = document.querySelector('.div');
-
-let li = document.createElement('li');
 
 
 formularioTareas.addEventListener('submit', (e) => {
     e.preventDefault();
-    e.stopPropagation();
+    const value = inputIngresarTarea.value;
+    // console.log(value);
     
+    value.toLowerCase();
     
-    if (inputIngresarTarea.value === '') {
-        alerta.classList.add('alert-danger');
-        alerta.classList.add('alert');
-        alerta.innerText = 'Debes ingresar una tarea';        
-        
-    }else{
+    if (value) {
+        const li = document.createElement('li');
+        const button = document.createElement('button');
+        li.innerText = value;
+        ulTareas.append(li);
         alerta.classList.remove('alert-danger');
         alerta.innerText = '';
+        
+        agregarBtnRealizado(li, button);
+    }else if (value === '') {
+        alerta.classList.add('alert-danger');
+        alerta.classList.add('alert');
+        alerta.innerText = 'Debes ingresar una tarea';  
     }
-    // console.log(inputIngresarTarea.value);
     
-    let datosIngresados = inputIngresarTarea.value;
-    agregarTarea(datosIngresados);
+    formularioTareas.reset()
     
 })
 
 
+function agregarBtnRealizado(li, button) {
+    
+    li.append(button);
+    button.innerText = 'Realizado'; 
+    button.classList.add('btn');
+    button.classList.add('btn-warning');
 
-function agregarTarea(datosIngresados){ 
-    
-    listaTareas.appendChild(li);
-    // if (inputIngresarTarea.value) {
-    //     listaTareas.appendChild(li);  
-    // }
-    
-    listaTareas.innerHTML += `
-                        <ul class="mg-5 d-flex justify-content-around" > 
-                            <li class="">${datosIngresados}</li>
-                            <button type="button" class="btn btn-danger">Eliminar</button>
-                        </ul>
-    
-                    `     
-    console.log(listaTareas);
+    button.addEventListener('click', () => {
+        li.remove();
+    })
+
+    li.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center');
 }
-
-
