@@ -1,0 +1,26 @@
+Requisitos del ejercicio:
+Interfaz Simple (HTML + CSS)
+
+Un campo de entrada para escribir la tarea.+
+Un botón para agregar la tarea.+
+Una lista donde se mostrarán las tareas agregadas.
+Cada tarea debe tener una opción para marcarse como completada y otra para eliminarla.
+Funcionalidad en JavaScript
+
+Utilizar módulos para organizar el código en archivos separados.
+Guardar las tareas en localStorage para que persistan después de recargar la página.
+Permitir agregar nuevas tareas.
+Permitir marcar una tarea como completada (cambiar el estilo).
+Permitir eliminar una tarea de la lista y del localStorage.
+Estructura del Proyecto
+
+index.html: Contiene la estructura básica de la aplicación.
+styles.css: Estilos básicos para la interfaz.
+js/main.js: Punto de entrada del código que inicializa la aplicación.
+js/storage.js: Módulo encargado de manejar el localStorage.
+js/ui.js: Módulo que maneja la manipulación del DOM.
+
+📌 Extra (Opcional, si queres mejorar el ejercicio)
+✅ Ordenar automáticamente las tareas completadas al final.
+✅ Añadir un contador de tareas pendientes.
+✅ Agregar una función para borrar todas las tareas a la vez.
