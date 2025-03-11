@@ -18,7 +18,7 @@ index.html: Contiene la estructura básica de la aplicación.
 styles.css: Estilos básicos para la interfaz.
 js/main.js: Punto de entrada del código que inicializa la aplicación.
 js/storage.js: Módulo encargado de manejar el localStorage.
-js/ui.js: Módulo que maneja la manipulación del DOM.
+js/ul.js: Módulo que maneja la manipulación del DOM.
 
 📌 Extra (Opcional, si queres mejorar el ejercicio)
 ✅ Ordenar automáticamente las tareas completadas al final.
